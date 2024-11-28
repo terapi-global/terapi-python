@@ -1,26 +1,19 @@
-from setuptools import setup, find_packages  # noqa: H301
-
-NAME = "client"
-VERSION = "1.0.0"
-# To install the library, run the following
-#
-# python setup.py install
-#
-# prerequisite: setuptools
-# http://pypi.python.org/pypi/setuptools
-
-REQUIRES = ["urllib3 >= 1.15", "six >= 1.10", "certifi", "python-dateutil"]
+from setuptools import setup, find_packages
 
 setup(
-    name=NAME,
-    version=VERSION,
-    description="Terapi.Web.Api-v1",
-    author_email="",
-    url="",
-    keywords=["Swagger", "Terapi.Web.Api-v1"],
-    install_requires=REQUIRES,
+    name="terapi-client",
+    version="1.0.0",
     packages=find_packages(),
-    include_package_data=True,
-    long_description="""\
-    """
+    author="Terapi Global",
+    author_email="integrations@terapi.global",
+    description="A Python client for easy integration with Terapi applications",
+    long_description=open('README.md', encoding='utf-8').read(),
+    long_description_content_type="text/markdown",
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Intended Audience :: Developers",
+        "Topic :: Software Development :: Libraries :: Python Modules",
+    ],
+    python_requires=">=3.6",
 )
